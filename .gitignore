@@ -1,0 +1,7 @@
+.env
+*.log
+target/
+node_modules/
+dist/
+application-dev.yml
+application-prod.yml
