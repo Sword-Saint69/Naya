@@ -1,0 +1,4 @@
+-- Seed helper: create admin by promoting a registered user.
+-- 1. Register via POST /api/auth/register, then run:
+-- UPDATE users SET role='ADMIN' WHERE email='admin@college.edu';
+-- No default passwords are seeded on purpose.
