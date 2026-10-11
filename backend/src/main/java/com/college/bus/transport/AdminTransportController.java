@@ -7,6 +7,8 @@ import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -42,7 +44,9 @@ public class AdminTransportController {
   }
 
   @GetMapping("/buses")
-  public ApiResponse<?> listBuses() { return ApiResponse.ok(buses.findAll()); }
+  public ApiResponse<?> listBuses(@PageableDefault(size = 20) Pageable pageable) {
+    return ApiResponse.ok(buses.findAll(pageable));
+  }
 
   @PostMapping("/drivers")
   public ApiResponse<?> addDriver(@Valid @RequestBody DriverReq r) {
@@ -51,7 +55,9 @@ public class AdminTransportController {
   }
 
   @GetMapping("/drivers")
-  public ApiResponse<?> listDrivers() { return ApiResponse.ok(drivers.findAll()); }
+  public ApiResponse<?> listDrivers(@PageableDefault(size = 20) Pageable pageable) {
+    return ApiResponse.ok(drivers.findAll(pageable));
+  }
 
   @PostMapping("/routes")
   public ApiResponse<?> addRoute(@Valid @RequestBody RouteReq r) {
@@ -84,7 +90,9 @@ public class AdminTransportController {
   }
 
   @GetMapping("/assignments")
-  public ApiResponse<?> listAssignments() { return ApiResponse.ok(assignments.findAll()); }
+  public ApiResponse<?> listAssignments(@PageableDefault(size = 20) Pageable pageable) {
+    return ApiResponse.ok(assignments.findAll(pageable));
+  }
 
   @GetMapping("/capacity")
   public ApiResponse<?> capacity(@RequestParam(required = false) Long routeId) {

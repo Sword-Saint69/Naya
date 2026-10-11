@@ -3,6 +3,8 @@ package com.college.bus.transport;
 import com.college.bus.common.ApiResponse;
 import jakarta.validation.Valid;
 import java.util.*;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,7 +17,9 @@ public class RouteController {
   }
 
   @GetMapping
-  public ApiResponse<?> list() { return ApiResponse.ok(routes.findAll()); }
+  public ApiResponse<?> list(@PageableDefault(size = 20) Pageable pageable) {
+    return ApiResponse.ok(routes.findAll(pageable));
+  }
 
   @GetMapping("/{id}")
   public ApiResponse<?> one(@PathVariable Long id) {

@@ -12,6 +12,7 @@ export default function Login() {
     try {
       const d = await api.login({ email, password });
       localStorage.setItem('access', d.access);
+      localStorage.setItem('refresh', d.refresh);
       localStorage.setItem('role', d.role);
       nav(d.role === 'ADMIN' ? '/admin' : '/routes');
     } catch (e: any) { setErr(e.message); }

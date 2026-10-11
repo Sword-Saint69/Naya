@@ -2,6 +2,8 @@ package com.college.bus.pass;
 
 import com.college.bus.common.ApiResponse;
 import java.util.Map;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,10 +17,10 @@ public class AdminPassController {
   }
 
   @GetMapping
-  public ApiResponse<?> all(@RequestParam(required = false) String status) {
-    if (status == null) return ApiResponse.ok(passes.findAll());
-    return ApiResponse.ok(passes.findAll().stream()
-      .filter(p -> status.equalsIgnoreCase(p.getStatus())).toList());
+  public ApiResponse<?> all(@RequestParam(required = false) String status,
+      @PageableDefault(size = 20) Pageable pageable) {
+    if (status == null) return ApiResponse.ok(passes.findAll(pageable));
+    return ApiResponse.ok(passes.findByStatus(status.toUpperCase(), pageable));
   }
 
   public record DecideReq(Long assignmentId, boolean feePaid) {}
