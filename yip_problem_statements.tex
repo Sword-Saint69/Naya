@@ -1,0 +1,243 @@
+% Young Innovators Programme (YIP) Kerala - Complete Info & Thematic Problem Compendium
+% Sources: yip.kerala.gov.in (/ , /about, /theme, /problemstatement, /student/signup), kdisc.kerala.gov.in, K-DISC Annual Report 2025-26
+% Compiled: 2026-10-11 | Method: UmbraCrawl research + direct fetch (public pages only)
+% Note: 1972 individual problem-shelf items are behind student login and cannot be scraped anonymously.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.2cm,headheight=14pt]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\definecolor{yipblue}{HTML}{0B3D91}
+\definecolor{yipteal}{HTML}{0E7C6B}
+\definecolor{yiplight}{HTML}{EEF3FF}
+
+\hypersetup{colorlinks=true,linkcolor=yipblue,urlcolor=yipblue,citecolor=yipteal}
+\titleformat{\section}{\Large\bfseries\color{yipblue}}{}{0em}{}[\vspace{-0.4em}\rule{\textwidth}{1.2pt}]
+\titleformat{\subsection}{\large\bfseries\color{black}}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{yipteal}}{}{0em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{YIP Kerala Compendium}}
+\fancyhead[R]{\small 2026-10-11}
+\fancyfoot[C]{\small\thepage}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1.2cm}
+{\Large\bfseries\color{yipblue} Young Innovators Programme (YIP) -- Kerala\par}
+\vspace{0.3cm}
+{\large Kerala Development and Innovation Strategic Council (K-DISC)\par}
+\vspace{0.5cm}
+{\large\bfseries Complete Programme Guide \& Thematic Problem Compendium\par}
+\vspace{0.4cm}
+{\normalsize YIP 1.0 (2018) to YIP 9.0 (2026) \quad|\quad 27 Themes \quad|\quad 1972 Problem Shelf (login-gated)\par}
+\vspace{0.8cm}
+\begin{tabular}{rl}
+\toprule
+Official portal & \url{https://yip.kerala.gov.in/} \\
+Themes page & \url{https://yip.kerala.gov.in/theme} \\
+About & \url{https://yip.kerala.gov.in/about} \\
+Problem submission & \url{https://yip.kerala.gov.in/problemstatement} \\
+Student signup & \url{https://yip.kerala.gov.in/student/signup} \\
+K-DISC & \url{https://kdisc.kerala.gov.in/en/young-innovators-programme-yip} \\
+\bottomrule
+\end{tabular}
+\vspace{0.8cm}
+
+\begin{center}
+\fcolorbox{yipblue}{yiplight}{\parbox{0.92\textwidth}{\small
+\textbf{Scope note (important):} This file contains \textbf{all public information} obtainable without login: programme overview, governance, eligibility, journey, YIP 1.0--8.0 statistics, all \textbf{27 official themes} with focus areas and representative challenge directions, notable past projects, benefits, timelines, and exact steps to open the full 1972-item problem shelf from inside a student account. The site serves the problem shelf only after email-verified login + institution selection (\texttt{/student/*}, Next.js + auth), so no anonymous crawler (UmbraCrawl included) can list the 1972 verbatim items. UmbraCrawl was attempted (crawled 9+17 pages, 10+ blocked by client-render/auth wall) and direct fetch of \texttt{/student} returns 404 without session. Do not treat the representative prompts in \S5 as verbatim shelf text -- use them to shortlist a theme, then copy the verbatim text from your dashboard.
+}}
+\end{center}
+\vfill
+{\small Compiled 2026-10-11 \quad|\quad Sources cited in \S9 \quad|\quad Build: \texttt{pdflatex yip\_problem\_statements.tex}\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Programme at a glance}
+
+Young Innovators Programme (YIP), launched 2018 by the Government of Kerala and conceptualised by K-DISC, equips students aged 13--37 with 21st-century skills (critical thinking, creativity, collaboration, communication) via Design Thinking, Root Cause Analysis, and DUI (Doing, Using, Interacting) innovation. Teams of 2--5 address curated real-world second-generation Kerala problems using IR 4.0 technologies, under a quadruple-helix model (academia + industry/startups + government + civil society).
+
+\begin{itemize}[leftmargin=1.2em]
+\item \textbf{Motto:} Igniting the Innovative Minds of Kerala.
+\item \textbf{Streams:} (1) School (Classes 8--12), (2) Technical / collegiate, (3) Medical and allied, (4) Employment / training / professionals.
+\item \textbf{Flow:} Ideator registration $\rightarrow$ idea submission (across 30 areas / 27 listed themes \textit{or} from 1972-item problem shelf) $\rightarrow$ L0 evaluation $\rightarrow$ L1 (preliminary) evaluation $\rightarrow$ training / mentoring $\rightarrow$ maker camp $\rightarrow$ protothon $\rightarrow$ district / state winners $\rightarrow$ grants, incubation, patents, startups, exit.
+\item \textbf{Scheme:} Approved by Council of Ministers 30-12-2022; 50-page scheme PDF via DTE Kerala.
+\item \textbf{2025-26 highlights (K-DISC Annual Report):} YIP 8.0 -- 12.57 lakh participants across 8,658 institutions, 47,641 ideas, 1,026 state-level winners; indigenous YIP portal built for end-to-end management; Rs.\ 4 crore total winner grants disbursed.
+\end{itemize}
+
+\subsection{Governance}
+Steering Committee includes Directors of Technical, Collegiate, Medical, General Education, Ayurveda, Homeopathy, Principal Secretaries (Higher Ed, LSGD, General Ed, Labour \& Skills), Health, Employment \& Training, SC/ST/Women-Child/Social Justice/SSK, CEOs of KSUM and KITE, K-DISC EVC, Member Secretary, Executive Director (PCDIS), Programme Head YIP. Advisory Committee comprises Vice-Chancellors of Kannur, KVASU, Calicut, KAU, KUHS, Sanskrit, KUFOS, CUSAT, NUALS, MG, KTU, Digital, Malayalam, Kerala, Central Kerala, Kalamandalam universities plus K-DISC leadership.
+
+\subsection{Key numbers (official homepage, 2026)}
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+Edition & Registered & Ideas & District winners & State winners \\
+\midrule
+1.0 (2018) & 1,320 & 204 & 44 & 22 \\
+2.0 (2019) & 3,950 & 1,003 & 210 & 102 \\
+3.0 (2020) & 13,002 & 3,747 & 234 teams & 96 teams \\
+4.0 (2021) & 1,02,512 & 9,404 & 229 teams & 114 teams \\
+5.0 (2022) & 1,58,965 & 17,877 & 508 teams & 98 teams \\
+6.0 (2023) & 2,13,473 & 25,352 & 274 teams & 45 teams \\
+7.0 (2024) & 2,77,248 & 26,320 & 318 teams & 46 teams \\
+8.0 (2025) & 4,82,738 & 47,641 & 437 teams & 74 teams \\
+\bottomrule
+\end{tabular}
+\end{center}
+Impact: female participation $\sim$53.3\% registration / 50.3\% state winners; grants Rs.\ 25,000 per district team, Rs.\ 50,000 per state team; prototypes, patents filed/under process, startups (Blukaze, AgenticNex AI, Kalpa Lights, Coearth, Redfox Robotics, URAV, Cashcrow, etc.\ -- full list on \url{https://yip.kerala.gov.in/}).
+
+\section{Who can apply and how}
+
+\begin{enumerate}[leftmargin=1.4em]
+\item Open \url{https://yip.kerala.gov.in/student/signup}. Fields: Full Name, Phone, Gender, Email (verify via OTP/link first), District (dropdown loads districts), Institution (approved-institution dropdown loads after district), Password + Confirm.
+\item Verify email before ``Create account'' enables. Then Sign in at \url{https://yip.kerala.gov.in/login}.
+\item Form team of 2--5. Choose either (a) open idea under any of 27 themes, or (b) pick a shelf problem (1972 items filterable by theme/district/department) from inside dashboard $\rightarrow$ submit idea canvas.
+\item YIP 8.0 window for college categories was 01-Oct-2025 to 15-Nov-2025 (DTE circular DTETVM/8553/2025). YIP 9.0 launched 2026 -- check dashboard / Instagram \url{https://www.instagram.com/yipkerala/} for current window.
+\item Each institution should nominate one faculty YIP Facilitator and support K-DISC district representatives for campaigns.
+\end{enumerate}
+
+\section{Benefits, stages, timeline}
+Training in design thinking and innovation leadership, specialised mentorship in new-product Fuzzy Front End, maker camp + protothon (Protothon 1.0: 60 teams, 10 funded), activity points, certificates, grace marks for Govt.\ school state winners, patent support, grant funding, incubation via KSUM, career foundation through real-world problem solving. Timeline per cohort spans roughly one year; exact YIP 9.0 dates appear only inside login and on socials.
+
+\section{Notable past projects (official \texttt{/about})}
+Lipid liquid-crystal fish-adulteration detector; anti-bedsore clothing; advanced fumigation device; water-hyacinth value products; marijuana detector; pneumatic exoskeleton; IoT concrete-maturity meter; coconut-oil bio-resin; semi-auto rubber mixer; auto solar-panel cleaner; unified pet-health app; bio-bin; energy-saving vessel; multi-purpose agri vehicle; aero water maker.
+
+\section{The 27 official themes -- full compendium}
+
+Below are the \textbf{verbatim 27 theme titles} from \url{https://yip.kerala.gov.in/theme}. Under each, \textit{Focus} summarises the domain and \textit{Representative challenge directions} gives typical shelf-style prompts to guide ideation. These prompts are \textbf{not} verbatim shelf copies -- always replace with the exact shelf text from your dashboard before submission (shelf requires $\geq$100-word problem framing: challenge, who is affected, gaps, desired outcome).
+
+\subsection{1. Agriculture, Plant Science \& Smart Farming}
+\textit{Focus:} paddy/plantation productivity, soil health, precision irrigation, pest/disease, farm mechanisation for smallholders. \textit{Directions:} low-cost soil-moisture + fertigation advisory for laterite soils; drone/image pest detection for banana/pepper; small-farm harvester for fragmented plots.
+
+\subsection{2. Food Technology \& Agro Processing}
+\textit{Focus:} post-harvest loss, value addition (jackfruit, banana, fish, spices), cold chain, food safety. \textit{Directions:} solar micro-dehydrator for SHGs; low-cost fish chill-box for vendors; rapid adulteration kit for milk/chilli.
+
+\subsection{3. Dairy, Animal Husbandry \& Poultry Sciences}
+\textit{Focus:} milk yield, mastitis, feed cost, poultry heat stress, vet access. \textit{Directions:} wearable heat-detection for cattle; low-cost mastitis strip; backyard poultry climate shelter.
+
+\subsection{4. Water Management \& Conservation}
+\textit{Focus:} wells, laterite aquifer recharge, drinking-water quality, flood/drought, greywater reuse. \textit{Directions:} well-recharge filter for households; fluoride/iron field kit; apartment greywater loop.
+
+\subsection{5. Renewable Energy \& Energy Systems}
+\textit{Focus:} rooftop solar O\&M, micro-hydro, biomass, storage, energy access for coastal/hilly hamlets. \textit{Directions:} auto solar-panel cleaner (dust/soot); pico-hydro for streams; biogas from fish-market waste.
+
+\subsection{6. Transport, Automotive \& Harbour Technologies}
+\textit{Focus:} last-mile, fishing-harbour logistics, EV charging, road safety, inland waterways. \textit{Directions:} fish-landing cold-transport box; low-cost blind-spot alert for buses; e-rickshaw swappable pack.
+
+\subsection{7. Climate Change Adaptation \& Environmental Science}
+\textit{Focus:} sea-level rise, landslides (Wayanad/Idukki), heat islands, carbon accounting. \textit{Directions:} landslide early-warning mesh; coastal-erosion monitor; school heat-action kit.
+
+\subsection{8. Solid, Liquid \& Hazardous Waste Management}
+\textit{Focus:} source segregation, Haritha Karma Sena workflows, e-waste, septage, hospital waste. \textit{Directions:} bio-bin for flats; sanitary-pad incinerator; septage-tracking app for panchayats.
+
+\subsection{9. Modern Medicine, Public Health, Biomedical Technology}
+\textit{Focus:} NCD screening, TB/leptospirosis, emergency referral, low-cost diagnostics, assistive care. \textit{Directions:} anaemia triage device for camps; bedsore-prevention mattress overlay; fumigation device for wards.
+
+\subsection{10. Women, Children, Elderly, PwD \& Marginalised Communities}
+\textit{Focus:} safety, anganwadi nutrition, elder fall-risk, disability access, tribal outreach. \textit{Directions:} fall-detection band for elderly living alone; tactile learning kit; low-cost sanitary vending + disposal for schools.
+
+\subsection{11. Future Technologies \& Artificial Intelligence}
+\textit{Focus:} Malayalam NLP, edge AI, robotics, digital twins, AI for governance/agri/health. \textit{Directions:} Malayalam voice helpdesk for schemes; crop-disease vision model on phone; traffic-violation detection aid.
+
+\subsection{12. Traditional Industries, MSME \& Market Innovation}
+\textit{Focus:} coir, handloom, cashew, khadi, market linkage, packaging, GI products. \textit{Directions:} coir-pith value board; handloom e-catalogue + costing tool; cashew-shell bio-fuel.
+
+\subsection{13. Education, Skills \& Human Development}
+\textit{Focus:} learning gaps, labs in Malayalam medium, skilling, career guidance, teacher tools. \textit{Directions:} low-cost science kit for UP schools; skill-matching app for ITI; attendance + learning tracker for multi-grade rooms.
+
+\subsection{14. Culture, Arts \& Creative Technologies}
+\textit{Focus:} Theyyam/Kathakali documentation, mural conservation, creator economy, AR/VR heritage. \textit{Directions:} AR walk for museums/forts; digitisation rig for palm-leaf manuscripts; royalty tracker for folk artists.
+
+\subsection{15. Good Governance \& Public Service Delivery}
+\textit{Focus:} grievance redressal, queue management, land records, panchayat dashboards, RTI. \textit{Directions:} token + SMS queue for taluk offices; pothole-report + fix-closure loop; file-movement tracker.
+
+\subsection{16. Space, Aeronautics \& Defence Technologies}
+\textit{Focus:} CanSat/UAV, coastal surveillance aid, disaster mapping, sat-data for fisheries/agri. \textit{Directions:} student CanSat telemetry kit; low-cost flood-map drone; fish-aggregation forecast display.
+
+\subsection{17. Fisheries \& Ocean Science}
+\textit{Focus:} catch preservation, ghost nets, craft safety, value addition, marine litter. \textit{Directions:} solar ice-box for vallams; ghost-net collection incentive; onboard distress beacon.
+
+\subsection{18. Infrastructure Development \& Livelihood Systems}
+\textit{Focus:} rural roads, housing (LIFE Mission), public-building maintenance, livelihood diversification. \textit{Directions:} concrete-maturity meter for small contractors; low-cost laterite-block tester; SHG livelihood planner.
+
+\subsection{19. Tourism \& Hospitality}
+\textit{Focus:} responsible tourism, homestays, waste at destinations, safety, multilingual guides. \textit{Directions:} carrying-capacity counter for eco-spots; homestay hygiene rating; offline audio guide.
+
+\subsection{20. Financial Systems \& FinTech}
+\textit{Focus:} Kudumbashree credit, chit-fund transparency, fraud alerts, micro-insurance. \textit{Directions:} SHG ledger app in Malayalam; phishing-alert tutor for seniors; micro-premium collector.
+
+\subsection{21. Supply Chain \& Logistics}
+\textit{Focus:} farm-to-mandi, cold chain breaks, last-mile in ghats, warehouse tracking. \textit{Directions:} agri-vehicle pooling board; crate tracker; mandi-price SMS board.
+
+\subsection{22. Disaster Management \& Public Safety}
+\textit{Focus:} floods (2018/19 lessons), fire, drowning, crowd safety, first response. \textit{Directions:} river-level SMS alarm; low-cost life-buoy drone aid; school-evacuation drill kit.
+
+\subsection{23. Sports, Wellness \& Fitness}
+\textit{Focus:} school fitness, physio access, traditional games (Kalaripayattu), nutrition. \textit{Directions:} posture-screening app; low-cost agility kit; hydration + heat guide for athletes.
+
+\subsection{24. Biotechnology, Molecular Biology, Genetics \& Life Science}
+\textit{Focus:} diagnostics, fermentation, tissue culture (banana/orchid), water-hyacinth bio-products. \textit{Directions:} rapid water-pathogen strip; banana tissue-culture hardening chamber; hyacinth fibre composite.
+
+\subsection{25. Complementary and Alternative Medicine -- AYUSH}
+\textit{Focus:} Ayurveda standardisation, raw-drug traceability, wellness protocols, documentation. \textit{Directions:} herb-adulteration lens; dosage-reminder for regimens; raw-drug provenance log.
+
+\subsection{26. Earth Sciences, Mining \& Geology}
+\textit{Focus:} quarrying impacts, laterite/clay mapping, groundwater prospecting, coastal sand. \textit{Directions:} quarry-vibration logger; well-yield estimator; landslide-susceptibility school map.
+
+\subsection{27. Assistive Technologies \& Wearables}
+\textit{Focus:} low-vision/hearing aids, mobility, prosthetics, caregiver support, classroom inclusion. \textit{Directions:} haptic navigation band; speech-to-Malayalam-text aid; adjustable low-cost walker.
+
+\section{How to get the verbatim 1972 problem statements}
+The shelf is not public HTML -- it loads as authenticated API data after login. Steps:
+\begin{enumerate}[leftmargin=1.4em]
+\item Sign up and sign in as in \S2. Use desktop Chrome/Edge; disable aggressive ad-block for \texttt{yip.kerala.gov.in}.
+\item Dashboard $\rightarrow$ \texttt{Idea submission} $\rightarrow$ \texttt{Choose from problem shelf}. Filter by theme (above 27), district, department.
+\item Open each item to copy: Problem ID, Title, Department/Organisation, Contact, full text ($\geq$100 words), expected outcome.
+\item Paste into \S7 template below, one per \texttt{\textbackslash subsection}, cite ID + URL + access date for traceability.
+\item If dashboard paginates or virtualises, scroll + ``Load more'' to the end before printing to PDF; 1972 rows typically need batched copy in chunks of 50--100.
+\end{enumerate}
+Do not share your password or session tokens with anyone including automated scrapers; institutional labs should use their own logins.
+
+\section{Idea-submission template (use one copy per problem)}
+\begin{quote}
+\small
+\textbf{Problem ID:} \_\_\_\_ \quad \textbf{Theme:} \_\_\_\_ \quad \textbf{Dept:} \_\_\_\_\\
+\textbf{Title:} \_\_\_\_\\
+\textbf{Verbatim statement (paste):} \_\_\_\_\\
+\textbf{Who is affected / where:} \_\_\_\_\\
+\textbf{Current gaps:} \_\_\_\_\\
+\textbf{Outcome needed:} \_\_\_\_\\
+\textbf{Proposed approach (DUI + IR4.0):} \_\_\_\_ \quad \textbf{Team:} \_\_\_\_
+\end{quote}
+
+\section{Problem-statement submission (for departments)}
+Departments submit via \url{https://yip.kerala.gov.in/problemstatement}: Organisation name, point-of-contact, email, phone, district, title, statement (min 100 words covering challenge, affected population, gaps, outcome). Review before Submit.
+
+\section{Sources and verification}
+\begin{itemize}[leftmargin=1.2em]
+\item Homepage + journey + stats + startups: \url{https://yip.kerala.gov.in/} (fetched 2026-10-11).
+\item About, quadruple helix, committees, example projects: \url{https://yip.kerala.gov.in/about}.
+\item 27 theme titles verbatim: \url{https://yip.kerala.gov.in/theme}.
+\item Submission form fields + 100-word rule: \url{https://yip.kerala.gov.in/problemstatement}.
+\item Signup fields + verify-email gate: \url{https://yip.kerala.gov.in/student/signup}.
+\item K-DISC YIP overview + 30 areas / 1972 shelf / L0-L1 flow: K-DISC Annual Report 2025-26 \url{https://kdisc.kerala.gov.in/wp-content/uploads/2026/05/K-DISC_2025-26_Annual-Report_240226.pdf} and \url{https://kdisc.kerala.gov.in/en/young-innovators-programme-yip}.
+\item YIP 8.0 window 01-Oct-2025--15-Nov-2025: DTE circular \url{https://dtekerala.gov.in/static/DEPTCIRCULARS/document-4433_merged.pdf}; scheme approved 30-12-2022: \url{https://www.dtekerala.gov.in/static/GOVTCIRCULARS/YIP.pdf}.
+\item Crawl: UmbraCrawl \texttt{research} attempted for shelf queries (9+17 crawled, blocked by Next.js/auth); \texttt{/student} without session returns 404.
+\end{itemize}
+
+\end{document}
