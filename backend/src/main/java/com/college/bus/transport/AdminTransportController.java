@@ -94,6 +94,38 @@ public class AdminTransportController {
     return ApiResponse.ok(assignments.findAll(pageable));
   }
 
+  public record StatusReq(@NotBlank String status) {}
+
+  @PatchMapping("/buses/{id}")
+  public ApiResponse<?> updateBus(@PathVariable Long id, @Valid @RequestBody StatusReq r) {
+    Bus b = buses.findById(id).orElseThrow(() -> new IllegalArgumentException("bus not found"));
+    b.setStatus(r.status().toUpperCase());
+    return ApiResponse.ok(buses.save(b));
+  }
+
+  @PatchMapping("/drivers/{id}")
+  public ApiResponse<?> updateDriver(@PathVariable Long id, @Valid @RequestBody StatusReq r) {
+    Driver d = drivers.findById(id).orElseThrow(() -> new IllegalArgumentException("driver not found"));
+    d.setStatus(r.status().toUpperCase());
+    return ApiResponse.ok(drivers.save(d));
+  }
+
+  @PatchMapping("/routes/{id}")
+  public ApiResponse<?> updateRoute(@PathVariable Long id, @Valid @RequestBody StatusReq r) {
+    Route route = routes.findById(id).orElseThrow(() -> new IllegalArgumentException("route not found"));
+    route.setStatus(r.status().toUpperCase());
+    return ApiResponse.ok(routes.save(route));
+  }
+
+  public record AssignActiveReq(boolean active) {}
+
+  @PatchMapping("/assignments/{id}")
+  public ApiResponse<?> updateAssignment(@PathVariable Long id, @RequestBody AssignActiveReq r) {
+    Assignment a = assignments.findById(id).orElseThrow(() -> new IllegalArgumentException("assignment not found"));
+    a.setActive(r.active());
+    return ApiResponse.ok(assignments.save(a));
+  }
+
   @GetMapping("/capacity")
   public ApiResponse<?> capacity(@RequestParam(required = false) Long routeId) {
     List<Assignment> list = routeId == null ? assignments.findAll()

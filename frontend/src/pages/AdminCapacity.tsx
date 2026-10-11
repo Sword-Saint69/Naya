@@ -24,6 +24,11 @@ export default function Admin() {
     catch (e: any) { setMsg(e.message); }
   };
 
+  const reject = async (id: number) => {
+    try { await api.reject(id); setMsg(`Rejected ${id}`); load(); }
+    catch (e: any) { setMsg(e.message); }
+  };
+
   return (
     <div>
       <h2>Transport Admin</h2>
@@ -40,6 +45,7 @@ export default function Admin() {
             <input placeholder="assignId" onChange={e => setF({ ...f, [`a_${p.id}`]: e.target.value })} size={6} />
             <label><input type="checkbox" onChange={e => setF({ ...f, [`p_${p.id}`]: e.target.checked })} /> paid</label>
             <button onClick={() => approve(p.id)}>Approve</button>
+            <button onClick={() => reject(p.id)} style={{ background: '#b91c1c' }}>Reject</button>
           </>)}</td></tr>))}</tbody></table></div>
       )}
 
