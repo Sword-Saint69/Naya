@@ -18,15 +18,18 @@ export default function Login() {
     } catch (e: any) { setErr(e.message); }
   };
   return (
-    <div className="card">
-      <h2>Login</h2>
-      <form onSubmit={submit}>
-        <input placeholder="email" value={email} onChange={e => setEmail(e.target.value)} />
-        <input placeholder="password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-        <button>Login</button>
-      </form>
-      {err && <p className="error">{err}</p>}
-      <p>No account? <Link to="/register">Register</Link></p>
+    <div className="auth-wrap">
+      <div className="card">
+        <h2>Welcome back</h2>
+        <p className="note">Login to manage your bus pass.</p>
+        <form onSubmit={submit}>
+          <input placeholder="email" value={email} onChange={e => setEmail(e.target.value)} />
+          <input placeholder="password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+          <button>Login</button>
+        </form>
+        {err && <p className="error">{err}</p>}
+        <p className="note">No account? <Link to="/register">Register</Link></p>
+      </div>
     </div>
   );
 }

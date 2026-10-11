@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import RoutesPage from './pages/RoutesPage';
@@ -9,16 +8,20 @@ import { logout } from './api';
 
 function Nav() {
   const nav = useNavigate();
+  const loc = useLocation();
   const role = localStorage.getItem('role');
   const out = () => { logout(); nav('/login'); };
+  const cls = (p: string) => (loc.pathname === p ? 'active' : '');
   return (
-    <nav>
-      <b>Bus Pass</b>
-      <Link to="/routes">Routes</Link>
-      <Link to="/me">My Pass</Link>
-      {role === 'ADMIN' && <Link to="/admin">Admin</Link>}
-      <span style={{ marginLeft: 'auto' }} />
-      {role ? <button onClick={out}>Logout ({role})</button> : <><Link to="/login">Login</Link><Link to="/register">Register</Link></>}
+    <nav className="topbar">
+      <span className="brand"><span className="brand-mark">🚌</span> Bus Pass</span>
+      <Link className={cls('/routes')} to="/routes">Routes</Link>
+      <Link className={cls('/me')} to="/me">My Pass</Link>
+      {role === 'ADMIN' && <Link className={cls('/admin')} to="/admin">Admin</Link>}
+      <span className="spacer" />
+      {role
+        ? <><span className="role-chip">{role}</span><button className="btn-ghost" onClick={out}>Logout</button></>
+        : <><Link className={cls('/login')} to="/login">Login</Link><Link className={cls('/register')} to="/register">Register</Link></>}
     </nav>
   );
 }
